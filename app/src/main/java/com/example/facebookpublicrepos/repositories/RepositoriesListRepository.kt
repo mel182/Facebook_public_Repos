@@ -1,9 +1,10 @@
 package com.example.facebookpublicrepos.repositories
 
 import com.example.facebookpublicrepos.api.ApiClient
+import com.example.facebookpublicrepos.constants.Constant
 import com.example.facebookpublicrepos.enumeration.Organization
 import com.example.facebookpublicrepos.interfaces.RepositoryListApiInterface
-import com.example.facebookpublicrepos.interfaces.RepositoryListDataCallback
+import com.example.facebookpublicrepos.interfaces.RepositoryCallback
 import com.example.facebookpublicrepos.models.Repository
 import retrofit2.Call
 import retrofit2.Callback
@@ -13,9 +14,8 @@ import retrofit2.Response
 class RepositoriesListRepository
 {
     private var repositoryApiInterface : RepositoryListApiInterface? = null
-    private val AMOUNT_PER_PAGE : Int = 20
 
-    fun retrieveRepositoryList(page_number: Int,callback: RepositoryListDataCallback) {
+    fun retrieveRepositoryList(page_number: Int,callback: RepositoryCallback) {
 
         repositoryApiInterface = ApiClient.getApiClient().create(RepositoryListApiInterface::class.java)
 
@@ -23,7 +23,7 @@ class RepositoriesListRepository
             .getRepositories(
                 Organization.FACEBOOK.value,
                 page_number,
-                AMOUNT_PER_PAGE)
+                Constant.AMOUNT_PER_PAGE)
 
         call.enqueue(object : Callback<List<Repository>>{
 

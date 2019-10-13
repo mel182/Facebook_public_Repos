@@ -1,6 +1,6 @@
 package com.example.facebookpublicrepos.interfaces
 
-interface RepositoryListDataCallback {
+interface RepositoryCallback {
 
     fun onResponse(data: List<Any>)
     fun onFailed(error: String)
