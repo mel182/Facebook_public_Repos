@@ -17,5 +17,9 @@ class Constant {
         //region Pagination constants
         val AMOUNT_PER_PAGE = 20
         //endregion
+
+        //region Intent key constants
+        val SELECTED_REPO = "selected_repo"
+        //endregion
     }
 }

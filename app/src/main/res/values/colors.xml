@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorPrimaryDark">@color/black</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="github_gray">#F6F8FA</color>
+    <color name="github_dark_gray">#E4E5E6</color>
+    <color name="black">#000000</color>
+
+
+<!--    E6E8EA  #D7D8D8 E4E5E6-->
 </resources>
