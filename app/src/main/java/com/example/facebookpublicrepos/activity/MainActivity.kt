@@ -4,11 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.facebookpublicrepos.R
-import com.example.facebookpublicrepos.repositories.RepositoriesListRepository
 import com.example.facebookpublicrepos.viewmodels.RepositoriesViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -31,10 +28,22 @@ class MainActivity : AppCompatActivity() {
 
         repositoriesViewModel = ViewModelProviders.of(this).get(RepositoriesViewModel::class.java)
 
-        repositoriesViewModel!!.getRepositoryList(1).observe(
-            this,
+//        repositoriesViewModel!!.getRepositoryList(1).observe(
+//            this,
+//            Observer {
+//                Log.i("list","List: $it")
+//            }
+//        )
+
+//        repositoriesViewModel!!.getRepositoryContributors("fbmeshd",1).observe(this,
+//            Observer {
+//                Log.i("list","Contributor: $it")
+//            }
+//        )
+
+        repositoriesViewModel!!.getRepositoryIssues("codemod",1).observe(this,
             Observer {
-                Log.i("list","List: $it")
+                Log.i("list","Issues: $it")
             }
         )
     }

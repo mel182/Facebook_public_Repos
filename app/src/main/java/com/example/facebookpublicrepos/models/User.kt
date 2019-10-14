@@ -3,20 +3,20 @@ package com.example.facebookpublicrepos.models
 import com.google.gson.annotations.SerializedName
 
 /**
- * The repository model class
+ * The user model class
  *
  * @author Melchior Vrolijk
  * @since 1.0
  */
-class Repository {
+class User {
 
     //region Name
-    @SerializedName("name")
+    @SerializedName("login")
     private val name: String = ""
     //endregion
 
-    //region Description
-    @SerializedName("description")
-    private val description: String = ""
+    //region Avatar URL
+    @SerializedName("avatar_url")
+    private val avatar_url: String = ""
     //endregion
 }
