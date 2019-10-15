@@ -3,4 +3,7 @@
     <string name="loading_data">Loading data&#8230;</string>
     <string name="repositories">Repositories</string>
     <string name="search_for_repository">Search for repository</string>
+    <string name="contributors">Contributors</string>
+    <string name="issues">Issues</string>
+
 </resources>
