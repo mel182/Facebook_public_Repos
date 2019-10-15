@@ -25,7 +25,7 @@ import com.example.facebookpublicrepos.models.Repository
 class RepositoryListCustomAdapter() : RecyclerView.Adapter<RepositoryListCustomAdapter.ViewHolder>(), Filterable{
 
     //region local instances
-    private var repositoryList: ArrayList<Repository> = ArrayList()
+    private var repositoryListCompleteSet: ArrayList<Repository> = ArrayList()
     private var repositoryFilterList: ArrayList<Repository> = ArrayList()
     private lateinit var context: Context
     //endregion
@@ -69,8 +69,8 @@ class RepositoryListCustomAdapter() : RecyclerView.Adapter<RepositoryListCustomA
 
         for (repository in list) {
 
-            if (!repositoryList.contains(repository)) {
-                this.repositoryList.add(repository)
+            if (!repositoryListCompleteSet.contains(repository)) {
+                this.repositoryListCompleteSet.add(repository)
                 this.repositoryFilterList.add(repository)
             }
         }
@@ -104,11 +104,11 @@ class RepositoryListCustomAdapter() : RecyclerView.Adapter<RepositoryListCustomA
 
                 if (queryString == null || queryString.isEmpty()) {
 
-                    filterData.addAll(repositoryList)
+                    filterData.addAll(repositoryListCompleteSet)
 
                 } else {
 
-                    repositoryList.forEach{
+                    repositoryListCompleteSet.forEach{
                         if (it.name.toLowerCase().contains(queryString)) {
 
                             if (!filterData.contains(it))
