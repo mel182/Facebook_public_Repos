@@ -17,8 +17,15 @@ import com.example.facebookpublicrepos.adapters.RepositoryListCustomAdapter
 import com.example.facebookpublicrepos.models.Repository
 import com.example.facebookpublicrepos.viewmodels.RepositoriesViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.loading_layout.*
 import kotlinx.android.synthetic.main.search_bar.*
 
+/**
+ * This is the main activity class
+ *
+ * @author Melchior Vrolijk
+ * @since 1.0
+ */
 class MainActivity : AppCompatActivity() {
 
     //region Local instances
@@ -38,18 +45,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initialAndSetAllComponents()
         performPagination(page_number)
-
-//        repositoriesViewModel!!.getRepositoryContributors("fbmeshd",1).observe(this,
-//            Observer {
-//                Log.i("list","Contributor: $it")
-//            }
-//        )
-
-//        repositoriesViewModel!!.getRepositoryIssues("codemod",1).observe(this,
-//            Observer {
-//                Log.i("list","Issues: $it")
-//            }
-//        )
     }
     //endregion
 

@@ -12,11 +12,11 @@ class User {
 
     //region Name
     @SerializedName("login")
-    private val name: String = ""
+    val name: String = ""
     //endregion
 
     //region Avatar URL
     @SerializedName("avatar_url")
-    private val avatar_url: String = ""
+    val avatar_url: String = ""
     //endregion
 }

@@ -49,23 +49,13 @@
 
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/loading_view"
+    <include layout="@layout/loading_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <include
-            layout="@layout/loading_data"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center" />
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
