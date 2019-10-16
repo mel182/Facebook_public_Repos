@@ -3,7 +3,7 @@ package com.example.facebookpublicrepos.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.facebookpublicrepos.R
-import com.example.facebookpublicrepos.adapters.DetailPageAdapter
+import com.example.facebookpublicrepos.adapters.DetailPagerAdapter
 import com.example.facebookpublicrepos.constants.Constant
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_detail.*
@@ -14,7 +14,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        val fragmentAdapter = DetailPageAdapter(supportFragmentManager,this)
+        val fragmentAdapter = DetailPagerAdapter(supportFragmentManager,this)
         viewpager_main.adapter = fragmentAdapter
         viewpager_main.setSwipePagingEnabled(false)
 
@@ -23,5 +23,9 @@ class DetailActivity : AppCompatActivity() {
 
         val selected_repo = intent.getStringExtra(Constant.SELECTED_REPO)
         title = selected_repo
+
+
+//        val test = AppCompatResources.getDrawable(this, R.drawable.repo_issue_icon)
+
     }
 }
